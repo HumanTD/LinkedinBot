@@ -8,8 +8,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
 
-EMAIL = "henri@yogirt.com"
-PASSWORD = "henri123"
+EMAIL = ""
+PASSWORD = ""
 
 
 def initialize_webdrive() -> WebDriver:
@@ -31,7 +31,7 @@ def login(driver: WebDriver, login_url: str) -> WebDriver:
     login_button = driver.find_element(By.XPATH, "/html/body/div/main/div[2]/div[1]/form/div[3]/button")
     try:
         login_button.click()
-        time.sleep(4)
+        time.sleep(20)
 
     except:
         print("Login Not working")
